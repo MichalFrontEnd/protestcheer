@@ -1,0 +1,23 @@
+$colors: (
+  dark: (
+    primary: #085868,
+    primary-darker: hsl(190, 86%, 17%),
+    secondary: #0ac9a6,
+    text: #0c0c0c,
+  ),
+  light: (
+    primary: #085868,
+    primary-darker: hsl(190, 86%, 17%),
+    secondary: #0ac9a6,
+    text: #0c0c0c,
+  ),
+) !default;
+
+:root {
+  @each $pallete, $shades in $colors {
+    // @if $pallete == dark
+    @each $color, $value in $shades {
+      --clr-#{$pallete}-#{$color}: #{$value};
+    }
+  }
+}
