@@ -1,0 +1,59 @@
+$colors: (
+  dark: (
+    primary: #085868,
+    primary-darker: hsl(190, 86%, 17%),
+    secondary: #0ac9a6,
+    text: #fff,
+    background: #0c0c0c,
+  ),
+  light: (
+    primary: pink,
+    primary-darker: hsl(190, 86%, 17%),
+    secondary: #0ac9a6,
+    text: #0c0c0c,
+    background: #ddd,
+  ),
+) !default;
+
+:root {
+  @each $pallete, $shades in $colors {
+    @each $color, $value in $shades {
+      --clr-#{$pallete}-#{$color}: #{$value};
+    }
+  }
+}
+// experiment
+// :root {
+//   @each $pallete, $shades in $colors {
+//     @if $pallete == dark {
+//       @each $color, $value in $shades {
+//         --clr-#{$pallete}-#{$color}: #{$value};
+//       }
+//       --theme: "dark";
+//     } @else {
+//       @media (prefers-color-scheme: dark) {
+//         @each $color, $value in $shades {
+//           --clr-#{$pallete}-#{$color}: #{$value};
+//         }
+//         --theme: "light";
+//       }
+//     }
+//   }
+// }
+
+// with prefers-color-scheme - requires 2 color lists
+// :root {
+//   @each $color, $value in $colors.light {
+//     --clr-#{$color}: #{$value};
+//   }
+//   --theme: "light";
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @each $color, $value in $colors.dark {
+//       --clr-#{$color}: #{$value};
+//     }
+//     --theme: "dark";
+//   }
+// }

@@ -1,6 +1,15 @@
-@use "./styles/main";
+@use "./styles/main" as *;
+
 .App {
   text-align: center;
+}
+
+.dark {
+  background-color: var(--clr-dark-primary);
+}
+
+.light {
+  background-color: var(--clr-light-primary);
 }
 
 .App-logo {

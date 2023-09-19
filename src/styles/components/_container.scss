@@ -1,0 +1,12 @@
+.container {
+  padding: 5%;
+  margin: 0;
+  border: purple 1px solid;
+
+  &--reverse {
+    background-color: var(--aluminium);
+  }
+  &--light {
+    background-color: var(--light);
+  }
+}
