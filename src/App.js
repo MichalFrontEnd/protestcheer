@@ -1,9 +1,11 @@
 import logo from "./logo.svg";
 import "./App.scss";
+import { ThemeToggle } from "./components/molecules/themetoggle";
 
 function App() {
   return (
     <div className="App">
+      <ThemeToggle />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -1,0 +1,15 @@
+@use "../../../styles/globals" as *;
+
+.theme-toggle {
+  @include square-size(3rem);
+  border-radius: 50%;
+  border: var(--clr-light-primary) 2px solid;
+  outline: 2px solid var(--clr-light-primary);
+  outline-offset: -2px;
+  float: right;
+
+  &__icon svg {
+    @include square-size(2rem);
+    fill: white;
+  }
+}

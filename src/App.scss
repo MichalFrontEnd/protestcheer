@@ -1,4 +1,6 @@
-@use "./styles/main" as *;
+@use "./styles/globals" as *;
+
+@use "/src/components/molecules/index.scss";
 
 .App {
   text-align: center;
@@ -13,7 +15,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  // height: 40vmin;
+  @include square-size(20rem);
   pointer-events: none;
 }
 
