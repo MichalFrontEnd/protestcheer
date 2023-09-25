@@ -9,9 +9,9 @@
   float: right;
   width: 6em;
   @include themify($themes) {
-    background: linear-gradient(themed("text"), themed("text-offset"), #999);
-    box-shadow: 2px 2px 3px 2px themed("shadow-offset");
+    background: linear-gradient(themed("text"), themed("text-offset"), #484554);
   }
+  box-shadow: 2px 2px 3px 2px #999;
 
   &__icon svg {
     @include square-size(1.8rem);
