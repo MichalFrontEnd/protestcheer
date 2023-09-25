@@ -1,4 +1,4 @@
-$colors: (
+$themes: (
   dark: (
     primary: #085868,
     primary-darker: hsl(190, 86%, 17%),
@@ -8,20 +8,43 @@ $colors: (
   ),
   light: (
     primary: pink,
-    primary-darker: hsl(190, 86%, 17%),
-    secondary: #0ac9a6,
+    primary-darker: rgb(155, 115, 122),
+    secondary: #b8eee4,
     text: #0c0c0c,
     background: #ddd,
   ),
 ) !default;
 
 :root {
-  @each $pallete, $shades in $colors {
+  @each $pallete, $shades in $themes {
     @each $color, $value in $shades {
       --clr-#{$pallete}-#{$color}: #{$value};
     }
   }
 }
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
 // experiment
 // :root {
 //   @each $pallete, $shades in $colors {

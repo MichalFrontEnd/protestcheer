@@ -1,16 +1,20 @@
 @use "./styles/globals" as *;
+@use "./styles/abstracts/colors" as *;
 
 @use "/src/components/molecules/index.scss";
 
 .App {
   text-align: center;
+  @include themify($themes) {
+    background: themed("primary-dark");
+  }
 }
 
-.dark {
+.theme-dark {
   background-color: var(--clr-dark-primary);
 }
 
-.light {
+.theme-light {
   background-color: var(--clr-light-primary);
 }
 
@@ -27,7 +31,7 @@
 }
 
 .App-header {
-  background-color: var(--clr-light-primary);
+  // background-color: var(--clr-light-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
