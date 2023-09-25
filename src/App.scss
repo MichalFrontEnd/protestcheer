@@ -1,10 +1,26 @@
-@use "./styles/main";
+@use "./styles/globals" as *;
+@use "./styles/abstracts/colors" as *;
+
+@use "/src/components/molecules/index.scss";
+
 .App {
   text-align: center;
+  @include themify($themes) {
+    background: themed("primary-dark");
+  }
+}
+
+.theme-dark {
+  background-color: var(--clr-dark-primary);
+}
+
+.theme-light {
+  background-color: var(--clr-light-primary);
 }
 
 .App-logo {
-  height: 40vmin;
+  // height: 40vmin;
+  @include square-size(20rem);
   pointer-events: none;
 }
 
@@ -15,7 +31,7 @@
 }
 
 .App-header {
-  background-color: var(--clr-light-primary);
+  // background-color: var(--clr-light-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

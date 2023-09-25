@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+body,
+main {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100%;
+  //todo: add media query for dark and light
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

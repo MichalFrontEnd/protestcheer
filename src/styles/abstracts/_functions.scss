@@ -1,16 +1,7 @@
-@use "../colors/colors.scss" as *;
+@use "./colors" as *;
 // @use "../typography/typography.variables" as typography;
 @use "sass:map";
 @use "sass:math";
-
-//determines text color according to background
-@function text-color($color) {
-  @if (lightness(clr($color)) > 40) {
-    @return var(--text);
-  } @else {
-    @return var(--paper);
-  }
-}
 
 // Calculating REMs - automatically converts pixels to REMs
 // -------------------------------------------------------------------

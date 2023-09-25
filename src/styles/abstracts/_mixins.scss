@@ -1,0 +1,10 @@
+@mixin square-size($size) {
+  height: $size;
+  width: $size;
+}
+
+@mixin vertical-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
