@@ -14,7 +14,7 @@ $themes: (
     background: #ddd,
   ),
 ) !default;
-
+//adds colors to root as CSS vars
 :root {
   @each $pallete, $shades in $themes {
     @each $color, $value in $shades {
@@ -23,6 +23,7 @@ $themes: (
   }
 }
 
+//creates light/dark theme function
 @mixin themify($themes) {
   @each $theme, $map in $themes {
     .theme-#{$theme} & {
@@ -44,25 +45,6 @@ $themes: (
 @function themed($key) {
   @return map-get($theme-map, $key);
 }
-
-// experiment
-// :root {
-//   @each $pallete, $shades in $colors {
-//     @if $pallete == dark {
-//       @each $color, $value in $shades {
-//         --clr-#{$pallete}-#{$color}: #{$value};
-//       }
-//       --theme: "dark";
-//     } @else {
-//       @media (prefers-color-scheme: dark) {
-//         @each $color, $value in $shades {
-//           --clr-#{$pallete}-#{$color}: #{$value};
-//         }
-//         --theme: "light";
-//       }
-//     }
-//   }
-// }
 
 // with prefers-color-scheme - requires 2 color lists
 // :root {

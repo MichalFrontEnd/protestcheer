@@ -4,14 +4,19 @@
   @include square-size(3rem);
   border-radius: 50%;
   border: lightgray 3px solid;
-  outline: 3px solid white;
+
   outline-offset: -5px;
   float: right;
   background: linear-gradient(#ddd, #bbb, #999);
   box-shadow: 2px 2px 3px 2px #999;
+  @include themify($themes) {
+    outline: 3px solid themed("primary");
+  }
 
   &__icon svg {
     @include square-size(2rem);
-    fill: white;
+    @include themify($themes) {
+      fill: themed("primary");
+    }
   }
 }
