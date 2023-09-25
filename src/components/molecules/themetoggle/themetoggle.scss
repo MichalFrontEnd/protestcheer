@@ -3,8 +3,8 @@
 .theme-toggle {
   @include square-size(3rem);
   border-radius: 50%;
-  border: lightgray 2px solid;
-  outline: 2px solid white;
+  border: lightgray 3px solid;
+  outline: 3px solid white;
   outline-offset: -5px;
   float: right;
   background: linear-gradient(#ddd, #bbb, #999);
