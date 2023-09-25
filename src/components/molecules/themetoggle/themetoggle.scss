@@ -2,21 +2,19 @@
 
 .theme-toggle {
   @include square-size(3rem);
-  border-radius: 50%;
+  border-radius: 500px;
   border: lightgray 3px solid;
-
+  outline: 3px solid #fff;
   outline-offset: -5px;
   float: right;
-  background: linear-gradient(#ddd, #bbb, #999);
-  box-shadow: 2px 2px 3px 2px #999;
+  width: 6em;
   @include themify($themes) {
-    outline: 3px solid themed("primary");
+    background: linear-gradient(themed("text"), themed("text-offset"), #999);
+    box-shadow: 2px 2px 3px 2px themed("shadow-offset");
   }
 
   &__icon svg {
-    @include square-size(2rem);
-    @include themify($themes) {
-      fill: themed("primary");
-    }
+    @include square-size(1.8rem);
+    fill: #fff;
   }
 }
