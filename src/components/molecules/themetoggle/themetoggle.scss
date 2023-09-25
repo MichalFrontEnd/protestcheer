@@ -3,10 +3,12 @@
 .theme-toggle {
   @include square-size(3rem);
   border-radius: 50%;
-  border: var(--clr-light-primary) 2px solid;
-  outline: 2px solid var(--clr-light-primary);
-  outline-offset: -2px;
+  border: lightgray 2px solid;
+  outline: 2px solid white;
+  outline-offset: -5px;
   float: right;
+  background: linear-gradient(#ddd, #bbb, #999);
+  box-shadow: 2px 2px 3px 2px #999;
 
   &__icon svg {
     @include square-size(2rem);
