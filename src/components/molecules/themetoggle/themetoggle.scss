@@ -9,7 +9,11 @@
   float: right;
   width: 6em;
   @include themify($themes) {
-    background: linear-gradient(themed("text"), themed("text-offset"), #484554);
+    background: linear-gradient(
+      themed("primary"),
+      themed("secondary"),
+      themed("button-accent")
+    );
     box-shadow: 2px 2px 3px 2px themed("shadow");
   }
 

@@ -4,9 +4,6 @@ import "./App.scss";
 import { ThemeToggle } from "./components/molecules/themetoggle";
 
 function App() {
-  const isBrowserDefaultDark = () =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [theme, setTheme] = useState(isBrowserDefaultDark() ? "dark" : "light");
   return (
     <div className={`theme-context`}>
       <div className="App">
