@@ -1,5 +1,5 @@
 @use "../abstracts/" as *;
-
+@use "../abstracts/colors" as *;
 body,
 main {
   margin: 0;
@@ -12,4 +12,11 @@ main {
 img {
   height: 100%;
   width: 100%;
+}
+
+.theme-context {
+  @include themify($themes) {
+    background: themed("primary");
+    color: themed("text");
+  }
 }

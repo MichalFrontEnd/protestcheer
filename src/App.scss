@@ -1,21 +1,9 @@
 @use "./styles/globals" as *;
-@use "./styles/abstracts/colors" as *;
 
 @use "/src/components/molecules/index.scss";
 
 .App {
   text-align: center;
-  @include themify($themes) {
-    background: themed("primary-dark");
-  }
-}
-
-.theme-dark {
-  background-color: var(--clr-dark-primary);
-}
-
-.theme-light {
-  background-color: var(--clr-light-primary);
 }
 
 .App-logo {
@@ -38,7 +26,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
