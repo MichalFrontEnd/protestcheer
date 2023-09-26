@@ -1,12 +1,16 @@
 import "./App.scss";
-import { Footer } from "./components/organisms/footer";
-import { ThemeToggle } from "./components/molecules/themetoggle";
+import { Footer, CarouselElement } from "./components/organisms";
+import { ThemeToggle } from "./components/molecules";
+
 //ToDo: Decide if toggle switch stays here
 function App() {
   return (
     <main className="theme-context">
-      <ThemeToggle />
-      <Footer />
+      <div className="container">
+        <ThemeToggle />
+        <CarouselElement />
+        <Footer />
+      </div>
     </main>
   );
 }
