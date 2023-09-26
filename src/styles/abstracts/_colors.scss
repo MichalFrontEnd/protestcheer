@@ -8,20 +8,23 @@ $themes: (
     text-offset: #aaa,
     highlight: #e7c594,
     shadow: #999,
-    shadow-reverse: #999,
+    shadow-inverse: #bbb,
+    puddle: #61dafb,
   ),
   light: (
-    primary: pink,
-    primary-variation: rgb(155, 115, 122),
-    secondary: #b8eee4,
+    primary: #d3e9ed,
+    primary-variation: #91c2ca,
+    secondary: #1a1958,
     light: #d3e9ed,
     text: #0c0c0c,
     text-offset: #c2c1d1,
     highlight: #e7c594,
     shadow: #bbb,
-    shadow-reverse: #999,
+    shadow-inverse: #999,
+    puddle: #61dafb,
   ),
 ) !default;
+// $globals: ();
 //adds colors to root as CSS vars
 :root {
   @each $pallete, $shades in $themes {
