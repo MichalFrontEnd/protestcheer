@@ -4,9 +4,13 @@ body,
 main {
   margin: 0;
   padding: 0;
-  width: 100vw;
   max-width: 100%;
   //todo: add media query for dark and light
+}
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -19,4 +23,10 @@ img {
     background: themed("primary");
     color: themed("text");
   }
+  height: 100vh;
+}
+
+.container {
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
 }

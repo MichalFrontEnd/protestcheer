@@ -1,13 +1,13 @@
 import "./App.scss";
+import { Footer } from "./components/organisms/footer";
 import { ThemeToggle } from "./components/molecules/themetoggle";
-
+//ToDo: Decide if toggle switch stays here
 function App() {
   return (
-    <div className={`theme-context`}>
-      <div className="App">
-        <ThemeToggle />
-      </div>
-    </div>
+    <main className="theme-context">
+      <ThemeToggle />
+      <Footer />
+    </main>
   );
 }
 
