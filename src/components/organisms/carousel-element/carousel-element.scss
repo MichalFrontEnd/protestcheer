@@ -1,20 +1,31 @@
 @use "../../../styles/globals" as *;
 
 .carousel {
-  &-container {
-    border: 4px hotpink solid;
-    height: fit-content;
-  }
-}
-
-.embla {
   overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  height: 20rem;
+  border: 4px hotpink solid;
+  &__container {
+    height: fit-content;
+    display: flex;
+  }
+  &__slide {
+    border: 4px blue solid;
+    //less than 100% doesn't fully fill viewport
+    flex: 0 0 90%;
+    min-width: 0;
+    max-width: 100%;
+    height: 20rem;
+    // if adding gap (on container) or margin
+    // add counter margin but only from not:first!
+    // TBD
+    @media (min-width: 768px) {
+      flex: 0 0 50%; /* Breakpoint SM slide covers 50% of the viewport */
+    }
+    // &:nth-child(1) {
+    //   margin-right: 10px;
+    // }
+  }
+  &:nth-child:not:first {
+    margin-right: 2%;
+    margin-left: 1%;
+  }
 }
