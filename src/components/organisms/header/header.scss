@@ -1,0 +1,9 @@
+@use "../../../styles/globals" as *;
+
+.header {
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  justify-items: end;
+  margin-block-start: 1rem;
+}
